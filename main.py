@@ -1,5 +1,6 @@
 from time import time
 import sys
+import json
 
 word_dictionary = []
 # load the dictionary file into the word_dictionary
@@ -31,7 +32,8 @@ def anagram_finder(anagram):
 
 def anagram_handler(event, context):
     print(event)
-    return anagram_finder(event["body"]["word"])
+    print(type(event))
+    return anagram_finder(json.loads(even)["body"]["word"])
 
 # only run the program if started directly, rather than from a module
 if __name__ == "__main__":
