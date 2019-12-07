@@ -24,6 +24,8 @@ def anagram_finder(anagram):
     if not is_anagram_found:
         words.append("No anagrams found")
 
+    print(words)
+    
     return (
         words,
         "{}s".format(str(time() - current_time))
@@ -33,8 +35,15 @@ def anagram_finder(anagram):
 def anagram_handler(event, context):
     print(event)
     print(type(event))
-    return anagram_finder(json.loads(even)["body"]["word"])
+    print(json.loads(event["body"])["word"])
+    
+    
+    return {
+        "response": anagram_finder(json.loads(event["body"])["word"]),
+        "status": 200
+    }
 
 # only run the program if started directly, rather than from a module
 if __name__ == "__main__":
     print(anagram_finder(sys.argv[1]))
+
