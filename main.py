@@ -40,7 +40,7 @@ def anagram_handler(event, context):
     
     return {
         "response": anagram_finder(json.loads(event["body"])["word"]),
-        "status": 200
+        "StatusCode": 200
     }
 
 # only run the program if started directly, rather than from a module
