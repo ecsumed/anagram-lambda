@@ -31,7 +31,7 @@ def anagram_finder(anagram):
 
 def anagram_handler(event, context):
     print(event)
-    return anagram_finder(event["word"])
+    return anagram_finder(event["body"]["word"])
 
 # only run the program if started directly, rather than from a module
 if __name__ == "__main__":
