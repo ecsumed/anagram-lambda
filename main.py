@@ -28,6 +28,11 @@ def anagram_finder(anagram):
         "{}s".format(str(time() - current_time))
     )
 
+
+def anagram_handler(event, context):
+    print event
+    return anagram_finder(event["word"])
+
 # only run the program if started directly, rather than from a module
 if __name__ == "__main__":
     print(anagram_finder(sys.argv[1]))
