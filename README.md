@@ -8,7 +8,7 @@ $ python3 main.py lead
 
 ## Lambda usage
 ```bash
-curl <LAMBDA-URL> -X POST -H "application/x-www-form-/abc/urlencoded" -d '{"word":"cat"}'
+curl <LAMBDA-URL> -X POST -H "application/x-www-form-urlencoded" -d '{"word":"lead"}' -H "x-api-key: <API-KEY>"
 ```
 
 ## Unit test
