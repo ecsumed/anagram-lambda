@@ -15,4 +15,6 @@ zip ${zipfile} main.py words.txt
 if [ -f "terraform/${zipfile}" ]; then rm "terraform/${zipfile}" ; fi
 cp ${zipfile} terraform/${zipfile}
 
-terraform apply terraform/main.tf
+cd terraform
+terraform init
+terraform apply main.tf
