@@ -17,4 +17,4 @@ cp ${zipfile} terraform/${zipfile}
 
 cd terraform
 terraform init
-terraform apply main.tf
+terraform apply -input=false -auto-approve
